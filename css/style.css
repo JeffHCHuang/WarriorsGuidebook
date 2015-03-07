@@ -1,0 +1,263 @@
+/*
+ * CSS Styles for Warrior's  Guidebook Project by Team Yo
+ */
+
+ /* =========================================================
+ * Baseline Styles
+ * ========================================================= */
+
+ html {
+ 	background-color: #cc3333;
+ }
+
+
+ body {
+	background-color: #cc3333;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*Type Styles*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Marcellus', serif;
+	font-weight: 550;
+}
+
+/* =========================================================
+ * Nav Bar Styles
+ * ========================================================= */
+
+.navbar-custom {
+	background-color:#cc3333;
+	color:#ffffff;
+	border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+	color:#fff;
+}
+.navbar-custom .navbar-nav > .active > a, 
+.navbar-nav > .active > a:hover, 
+.navbar-nav > .active > a:focus {
+	color: #ffffff;
+	background-color:transparent;
+}
+
+.navbar-custom .navbar-brand {
+	color:#ffffff;
+}
+
+.fa-bars {
+	color: white;
+	background-color: #cc3333;
+}
+
+/*Set the background to transparent*/
+.navbar-toggle {
+/* 	border-color:white; */
+	background-color: transparent;
+	padding-top:12px;
+}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus {
+    background-color: #993333;
+}
+
+.navbarItem a.active {
+	background-color: #993333;
+}
+
+.navbarItem a:hover {
+	background-color: #993333 !important;
+}
+
+/* =========================================================
+ * Body Styles
+ * ========================================================= */
+
+/*Added some padding on the top*/
+.brandFont {
+	font-family: 'Marcellus', serif;
+	font-size: 20px;
+	padding-top:20px;
+}
+
+#brandLogo {
+	display:block;
+	margin:auto;
+	margin-top: 0px;
+	margin-bottom:-5px;
+}
+
+.bannerText {
+	margin:auto;
+	font-family: 'Marcellus';
+	color: white;
+	padding-bottom: 30px;
+}
+
+#welcomeMessage {
+	margin-top:-10px;
+}
+
+
+/* =========================================================
+ * Button Styles
+ * ========================================================= */
+
+
+/*Added border-radius*/
+.bannerButton {
+	border-color: white;
+	background-color: #cc3333;
+	border-radius: 0px;
+	color: white;
+}
+
+.fixedSizeButton {
+	width:230px !important;
+	height: 50px !important;
+	display:block;
+	margin:auto;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.fixedSizeButton:hover {
+	color: white;
+	background-color: #993333;
+}
+
+/* =========================================================
+ * Card Styles
+ * ========================================================= */
+
+/*Changed font to Marcellus, Added bottom margin*/
+.jumbotron-custom {
+	background-color: #eeeeee;
+	color: #555555;
+	font-family: 'Marcellus', serif;
+	margin-top: -50px;
+	margin-bottom: -30px;
+}
+
+/*Changed font to open sans*/
+.jumbotron-custom p {
+	color: #333333;
+	font-family: 'Open sans';
+	font-size:15px;
+}
+
+
+.panelCustom {
+	/* max-height: 400px;*/
+	border-radius: 0px;
+	margin: 0px;
+	margin-top: 10px;
+	margin-bottom: 40px;
+    box-shadow: 5px 5px 2px #e0e0e0;
+    background-color: #fbfbfb;
+    border-style: none;
+
+}
+
+
+.panel-body {
+	margin-bottom: -25px;
+}
+
+.categoryIcon {
+	display:block;
+	margin:auto;
+}
+
+/* =========================================================
+ * Big Screen Version 
+ * ========================================================= */
+
+ @media only screen and (max-width: 1920 px) {
+ 	#brandLogo {
+ 	width:50%;
+	height:50%;
+	display:block;
+	margin:auto;
+	margin-top: 0px;
+	margin-bottom:-5px;
+	padding-left:25px;
+}
+
+.navbar-nav{
+	visibility: hidden;
+
+}
+
+
+}
+
+
+/* =========================================================
+ * Smaller Screen Version 
+ * ========================================================= */
+
+
+ @media only screen and (max-width: 980px) {
+ 	#brandLogo {
+
+	display:block;
+	margin:auto;
+	margin-top: 0px;
+	margin-bottom:-5px;
+}
+
+.navbar-nav{
+	visibility: hidden;
+
+}
+
+
+}
+
+ /* =========================================================
+ * Tablet Version 
+ * ========================================================= */
+
+ @media handheld, only screen and (max-width: 768px) {
+
+ 	#brandLogo {
+ 	width:60%;
+	height:60%;
+	display:block;
+	margin:auto;
+	margin-top: 0px;
+	margin-bottom:-5px;
+
+	}
+
+	.navbar-nav{
+	visibility: visible;
+
+ }
+
+ /* =========================================================
+ * Mobile version 
+ * ========================================================= */
+
+@media handheld, only screen and (max-width: 389px) {
+
+	.navbar-nav{
+	visibility: visible;
+
+	}
+
+	#brandLogo {
+	width:80%;
+	height:80%;
+	display:block;
+	margin:auto;
+	margin-top: 0px;
+	margin-bottom:-5px;
+	margin-right: 30px;
+	}
+
+}

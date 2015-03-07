@@ -1,0 +1,55 @@
+/*
+ * CSS Styles for Admin App for Warrior's  Guidebook Project by Team Yo
+ */
+
+
+ /*Type Styles*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+
+/*Body Styles*/
+
+.LoginForm{
+
+	max-width: 300px;
+	text-align: center;
+	margin:auto;
+	margin-top:20px;
+	margin-bottom: 20px;
+	
+}
+
+.VideoForm {
+	padding-top: 33px;
+	max-width: 300px;
+	border:1px;
+}
+
+.VideoForm h5{
+	text-align: center
+}
+
+.VideoButtons{
+	text-align: right;
+
+}
+
+.VideoFilters{
+	padding-top: 95px;
+}
+
+.VideoSearch{
+	margin-bottom: 20px;
+	margin-right:;
+}
+
+.VideoTable{
+
+}
+
+.VideoLabels th{
+	text-align: center'
+}
+

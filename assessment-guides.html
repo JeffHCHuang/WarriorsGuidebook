@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<!-- May need this to display correctly on mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+
+	<!-- Normalize css across browsers. Friendlier then a reset. -->
+	<!-- HTML5 normalize.css from http://necolas.github.com/normalize.css/ -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Marcellus|Open+Sans' rel='stylesheet' type='text/css'>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+	<!-- Font Awesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="assessment-guides-src/style.css">
+
+	<title>Assessment Guide | The Warrior's Guidebook</title>
+</head>
+<body ng-app>
+	
+	<!-- Navbar -->
+	<nav class="navbar navbar-custom" role="navigation">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<i class="fa fa-bars"></i>
+				</button>
+				<a class="navbar-brand brandFont" href="index.html">The Warrior's Guidebook</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="navbarItem"><a href="training-videos.html"><h5>Training Videos</h5></a></li>
+					<li class="navbarItem"><a class="currentPage" href="assessment-guides.html"><h5>Assessment Guides</h5></a></li>
+					<!-- <li class="navbarItem " ng-hide="user != null"><a href="#"><h5>Log In </h5></a></li>
+					<li class="navbarItem " ng-show="user != null"><a href="#"><h5>Log Out</h5></a></li> -->
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<!-- Jumbotron -->
+	<div class="jumbotron jumbotron-custom">
+		<h2 class="text-center">Assessment Guide</h2>
+		<h5 class="text-center">Select a path you would like to complete.</h5>
+
+		<div class="selectBar" ng-hide='cord==null'>
+			<select ng-model="cord" id="selectType" class="form-control">
+				<option value="" disabled>Select an assessment...</option>
+				<option value="Green cord">Green cord</option>
+				<option value="Blue cord">Blue cord</option>
+				<option value="Red cord">Red cord</option>
+				<option value="Silver cord">Silver cord</option>
+			</select>
+		</div>
+	</div>
+
+	<!-- Assessment Categories -->
+	<button class="col-md-3 button-custom" ng-click='cord="Green cord"' ng-show='cord==null'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body">
+				<img src="assessment-guides-src/green.png" class="categoryIcon"/>
+			</div>
+			<div class="panel-body text-center"><h4>Green Cord</h4><p>On your way to the Green Cord you will be begin the process of building a true foundation in the core principals.</p></div>
+		</div>
+	</button>
+	<button class="col-md-3 button-custom" ng-click='cord="Blue cord"' ng-show='cord==null'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body">
+				<img src="assessment-guides-src/blue.png" class="categoryIcon"/>
+			</div>
+			<div class="panel-body text-center"><h4>Blue Cord</h4><p>On your way to the Blue Cord you will be learning the proper postures, movement, attacks, defences, and first strategies of combat.</p></div>
+		</div>
+	</button>
+	<button class="col-md-3 button-custom" ng-click='cord="Red cord"' ng-show='cord==null'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body">
+				<img src="assessment-guides-src/red.png" class="categoryIcon"/>
+			</div>
+			<div class="panel-body text-center"><h4>Red Cord</h4><p>On your way to the Red Cord you will be gaining a deeper level of understanding of core principles and techniques of the rapier.</p></div>
+		</div>
+	</button>
+	<button class="col-md-3 button-custom" ng-click='cord="Silver cord"' ng-show='cord==null'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body">
+				<img src="assessment-guides-src/silver.png" class="categoryIcon"/>
+			</div>
+			<div class="panel-body text-center"><h4>Silver Cord</h4><p>On your way to the Silver Cord you will expand your training with the rapier and sidesword, as well as the longsword and quarterstaff.</p></div>
+		</div>
+	</button>
+
+	<!-- Assessment Categories --> 
+
+	<div class="col-sm-12" ng-hide='cord==null'>
+		<div class="panel panel-default panelCustom">
+			<img src="assessment-guides-src/assessmenticonsmall.png" class="categoryIcon"/>
+			<div class="panel-body text-center"><p>Once you have been signed off on all the requirements, you are ready to prepare for your exam. Use this as a guide to assist your preparation.</p></div>
+		</div>
+	</div>
+
+	<!-- Green --> 
+
+	<div class="col-sm-12" ng-show='cord=="Green cord"'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body text-left">
+				<div class="checkbox">
+					<h4 class = "text-left"> Posture </h4> 
+					<label> - Defense </label> 
+				</div>
+				<div class="checkbox">
+					<label> - Offense </label> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12" ng-show='cord=="Green cord"'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body text-left">
+				<div class="checkbox">
+					<h4 class = "text-left"> Lunge </h4> 
+					<label> - Order</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Entry </label> 
+				</div>
+				<div class="checkbox">
+					<label> - Recovery</label> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12" ng-show='cord=="Green cord"'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body text-left">
+				<div class="checkbox">
+					<h4 class = "text-left"> Measure </h4> 
+					<label> - Stretta: narrow, fixed pace</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Larga: wide, expanded pace</label> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12" ng-show='cord=="Green cord"'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body text-left">
+				<div class="checkbox">
+					<h4 class = "text-left"> Movement </h4> 
+					<label> - Advancing</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Sideways / Circling </label> 
+				</div>
+				<div class="checkbox">
+					<label> - Passing Step</label> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12" ng-show='cord=="Green cord"'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body text-left">
+				<div class="checkbox">
+					<h4 class = "text-left"> Gaining the Sword </h4> 
+					<label> - Inside Line, Outside Line</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Crossing the Line</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Forte over Debole</label> 
+				</div>
+				<div class="checkbox">
+					<label> - The True Edge</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Finding the Sword</label> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12" ng-show='cord=="Green cord"'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body text-left">
+				<div class="checkbox">
+					<h4 class = "text-left"> Rapier Guards </h4> 
+					<label> - Prima: first</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Seconda: second</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Terza: third</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Quatra: fourth</label> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12" ng-show='cord=="Green cord"'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body text-left">
+				<div class="checkbox">
+					<h4 class = "text-left"> Recovering Control </h4> 
+					<label> - Cavacione di Sotto: under</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Cavacione di Sopra: over</label> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12" ng-show='cord=="Green cord"'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body text-left">
+				<div class="checkbox">
+					<h4 class = "text-left"> Sidesword Cutting </h4> 
+					<label> - Eight Cuts</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Cutting with the tip, center of percussion abd forte</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Timing of hand foot</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Parry (in front)</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Deflection (behind)</label> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12" ng-show='cord=="Green cord"'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body text-left">
+				<div class="checkbox">
+					<h4 class = "text-left"> Tempo and Strategy </h4> 
+					<label> - Primo Tempo</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Dui Tempi</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Mezzo Tempo</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Contra Tempo</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Stringere</label> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12" ng-show='cord=="Green cord"'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body text-left">
+				<div class="checkbox">
+					<h4 class = "text-left"> Longsword </h4> 
+					<label> - Posture</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Movement</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Cutting Order</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Six Cuts</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Thrust</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Measures</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Parry: in dui tempi</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Counter Cut: contra tempo</label> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12" ng-show='cord=="Green cord"'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body text-left">
+				<div class="checkbox">
+					<h4 class = "text-left"> Tenets and Salute </h4> 
+					<label> - Proper Arms</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Proper Respect</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Salute: Arte, Ardore, Onore</label> 
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Blue --> 
+	<div class="col-sm-12" ng-show='cord=="Blue cord"'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body text-left">
+				<div class="checkbox">
+					<label> - Collar and elbow position</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Movement in collar and elbow</label> 
+				</div>
+				<div class="checkbox">
+					<label> - The 3 keys and varied holds</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Single rapier slow work</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Single rapier slow work</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Approaching the opponent</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Receiving the opponent</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Use the offhand for primary and secondary stringerie</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Defense against the cut in various tempos</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Use of the cut to stringere my opponent</label> 
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Red -->
+	<div class="col-sm-12" ng-show='cord=="Red cord"'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body text-left">
+				<div class="checkbox">
+					<label> - Collar and elbow position</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Holds applied from collar and elbow</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Single rapier slow work</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Use of Voids</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Use of the off-hand</label> 
+				</div>
+				<div class="checkbox">
+					<label> - The fight in refused</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Rapier and Dagger slow work</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Primary stringere of the dagger</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Secondary stringere of the dagger</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Marozzo's progression</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Marozzo's First Assalto (Introduction, parts 1 and 2)</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Marozzo's Second Assalto (parts 1-3)</label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Silver -->
+	<div class="col-sm-12" ng-show='cord=="Silver cord"'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body text-left">
+				<div class="checkbox">
+					<h4>Rapier and Dagger</h4>
+					<label> - Striking in proper tempo</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Striking at proper measure</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Use of proper postures and positions of sword and dagger</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Maintaining dominance of the fight and the time</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Use of diverse techniques in applicable situations</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Striking in proper tempo</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Striking at proper measure</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Use of positions of the sword</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Provision of proper cover and crossings</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Application of the cut and thrust</label> 
+				</div>
+				<div class="checkbox"> 
+					<label> - Entry to and exits from Giocco Stretto</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Play on both sides of the sword</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Maintaining Guard</label> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12" ng-show='cord=="Silver cord"'>
+		<div class="panel panel-default panelCustom">
+			<div class="panel-body text-left">
+				<div class="checkbox">
+					<h4>Sidesword</h4>
+					<label> - Striking in proper tempo</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Striking at proper measure</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Use of positions of the sword</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Provision of proper cover and crossings</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Application of the cut and thrust</label> 
+				</div>
+				<div class="checkbox"> 
+					<label> - Entry to and exits from Giocco Stretto</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Play on both sides of the sword</label> 
+				</div>
+				<div class="checkbox">
+					<label> - Maintaining Guard</label> 
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div class="col-md-12 container Footer">
+		<hr style="border-color: #DDDDDD; margin-bottom:0px">
+		<p class="text-center">Made for Academie Duello</p>
+	</div>
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+	<!-- AngularJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+
+	<!-- Firebase -->
+	<script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+
+	<!-- Simple Login -->
+	<script src="https://cdn.firebase.com/js/simple-login/1.6.3/firebase-simple-login.js"></script>
+
+	<!-- Custom JS -->
+	<script type="text/javascript" src="assessment-guides-src/app.js"></script>
+</body>
+</html>
